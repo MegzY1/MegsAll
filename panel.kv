@@ -1,0 +1,101 @@
+#:import rgba kivy.utils.rgba
+WindowManager:
+	LoginWindow:
+	HelpWindow:
+
+<LoginWindow>
+	name: "login"
+
+	dcname: dcname
+	product: product
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/panel/background2.png"
+		GridLayout:
+			rows: 10
+			padding: 50
+
+			Label:
+				text: "Username : "
+				font_size: 19
+			TextInput:
+				id: dcname
+				multiline: False
+
+			Label:
+				text: "\n"
+
+			Label:
+				text: "Key : "
+				font_size: 18
+			TextInput:
+				id: product
+				multiline: False
+
+			Label:
+				text: "\n"
+
+			Label:
+				text: "\n"
+
+			Button:
+				text: "Login"
+				font_name: "F:/kivy/panel/GOTHIC.TTF"
+				font_size: 27
+				background_color: (0, 0, 0)
+				background_down: '0, 0, 0, .8'
+				on_press: root.btn()
+
+		AnchorLayout:
+			anchor_y: 'top'
+			anchor_x: 'left'
+			Button:
+				text: "<< Help"
+				size_hint: 0.25, 0.1
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'help'
+					root.manager.transition.direction = 'right'
+
+<HelpWindow>
+	name: "help"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/panel/background2.png"
+		GridLayout:
+			rows: 3
+			padding: 50
+
+			Label:
+				text: "     megs Discord Server : \n[ref=link][color=0000ff]    https://discord.gg/megs[/color]\n\n  What we've planned in the future : \n\n\n\n\n\n\n\n\n\n\n"
+				font_size: 18
+				markup: True
+				on_ref_press:
+					root.go()
+
+		AnchorLayout:
+			anchor_y: 'center'
+			anchor_x: 'center'	
+			Button:
+				text: "Plans"
+				background_color: (0, 0, 0)
+				background_down: '0, 0, 0, .8'
+				size_hint: 0.25, 0.1
+				on_release:
+					app.root.current = 'login'
+					root.manager.transition.base = 'center'
+
+		AnchorLayout:
+			anchor_y: 'top'
+			anchor_x: 'right'
+			Button:
+				text: "Login >>"
+				size_hint: 0.25, 0.1
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'login'
+					root.manager.transition.direction = 'left'
