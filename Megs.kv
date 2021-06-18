@@ -1,0 +1,843 @@
+#:import rgba kivy.utils.rgba
+WindowManager:
+	MenuWindow:
+	SupportWindow:
+	InfoWindow:
+	CSGOWindow:
+	MCWindow:
+	ChangeLogsWindow:
+	HcWindow:
+	ImmunityWindow:
+	ZeroxWindow:
+	GTApWindow:
+	OnetapWindow:
+	WurstWindow:
+	ShowcaseWindow:
+	Showcase2Window:
+	Showcase3Window:
+	Showcase4Window:
+	Showcase5Window:
+	Showcase6Window:
+	BuyWindow:
+	BuyCSGOWindow:
+
+# Menu
+<MenuWindow>
+	name: "menu"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/MegsMenu2.png"
+		GridLayout:
+			rows: 6
+			padding: 50
+
+			Label:
+				text: "MegsWindow\n    "
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 70
+				color: rgba([500, 75, 200, 255])
+
+			Button:
+				text: "GTA Cheats"
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 25
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'info'
+					root.manager.transition.direction = 'up'
+
+			Button:
+				text: "CSGO Cheats"
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 25
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'csgo'
+					root.manager.transition.direction = 'up'
+
+			Button:
+				text: "MC Cheats"
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 25
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'mc'
+					root.manager.transition.direction = 'up'			
+
+			Button:
+				text: "Change Log"
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 25
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'logs'
+					root.manager.transition.direction = 'left'
+
+			Button:
+				text: "Support"
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 25
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'support'
+					root.manager.transition.direction = 'left'
+
+# Support
+<SupportWindow>
+	name: "support"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/MegsMenu2.png"
+
+		Label:
+			text: "Support\n \n \n \n \n \n "
+			font_name: "F:/kivy/MASQUE_.ttf"
+			font_size: 35
+			color: [1, 1, 1, 1]	
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "<< back to Menu"
+				size_hint: 0.3, 0.15
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'menu'
+					root.manager.transition.direction = 'right'
+
+		AnchorLayout:
+			anchor_y: 'center'
+			anchor_x: 'center'
+
+			Label:
+				text: "add MegzY#8888 on Discord for Support"
+				font_size: 24
+				color: [1, 1, 1, 1]			
+
+# Info
+<InfoWindow>
+	name: "info"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/MegsMenu2.png"
+		GridLayout:
+			rows: 6
+			padding: 50
+
+			Label:
+				text: "Best undetected\n     GTA Cheats: \n"
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 35
+				color: [1, 1, 1, 1]
+
+			Button:
+				text: "Hags-Club >>"
+				font_name: "F:/kivy/pricedown bl.ttf"
+				font_size: 19
+				size_hint: 0.5, 0.5
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'hc'
+					root.manager.transition.direction = 'left'
+			
+			Button:
+				text: "Immunity >>"
+				font_name: "F:/kivy/pricedown bl.ttf"
+				font_size: 19
+				size_hint: 0.5, 0.5
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'immunity'
+					root.manager.transition.direction = 'left'
+
+			Button:
+				text: "0xCheats >>"
+				font_name: "F:/kivy/pricedown bl.ttf"
+				font_size: 19
+				size_hint: 0.5, 0.5
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'zerox'
+					root.manager.transition.direction = 'left'
+		
+			Button:
+				text: "GTA+ >>"
+				font_name: "F:/kivy/pricedown bl.ttf"
+				font_size: 19
+				size_hint: 0.5, 0.5
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'gtap'
+					root.manager.transition.direction = 'left'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "| back to Menu |"
+				size_hint: 0.3, 0.15
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'menu'
+					root.manager.transition.direction = 'down'
+
+<CSGOWindow>
+	name: "csgo"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/MegsMenu2.png"
+		GridLayout:
+			rows: 4
+			padding: 50
+
+			Label:
+				text: "   CSGO \n Cheats: \n"
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 35
+				color: [1, 1, 1, 1]
+
+			Button:
+				text: "ONETAP Cheats >>"
+				font_name: "F:/kivy/cs_regular.ttf"
+				font_size: 19
+				size_hint: 0.5, 0.5
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'onetap'
+					root.manager.transition.direction = 'left'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "| back to Menu |"
+				size_hint: 0.3, 0.15
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'menu'
+					root.manager.transition.direction = 'down'
+
+<MCWindow>
+	name: "mc"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/MegsMenu2.png"
+		GridLayout:
+			rows: 4
+			padding: 50
+
+			Label:
+				text: "MINECRAFT \n   Cheats: \n"
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 35
+				color: [1, 1, 1, 1]
+
+			Button:
+				text: "WURST Cheats >>"
+				font_name: "F:/kivy/Minecraft.ttf"
+				font_size: 19
+				size_hint: 0.5, 0.5
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'wurst'
+					root.manager.transition.direction = 'left'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "| back to Menu |"
+				size_hint: 0.3, 0.15
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'menu'
+					root.manager.transition.direction = 'down'
+
+<ChangeLogsWindow>
+	name: "logs"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/MegsMenu2.png"
+		GridLayout:
+			rows: 6
+			padding: 50
+
+		Label:
+			text: "Change logs:\n \n \n \n \n \n "
+			font_name: "F:/kivy/MASQUE_.ttf"
+			font_size: 35
+			color: [1, 1, 1, 1]
+
+		Label:
+			text: "[color=66ff00][+][/color] Hags-Club Page\n[color=66ff00][+][/color] Immunity Page\n[color=66ff00][+][/color] 0xCheats Page\n[color=66ff00][+][/color] GTA+ Page\n[color=66ff00][+][/color] Showcase`s in every Cheats Page\n[color=66ff00][+][/color] CSGO Page added"
+			font_size: 24
+			color: [1, 1, 1, 1]
+			markup: True
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "<< back to Menu"
+				size_hint: 0.3, 0.15
+				background_color: [0, 0, 0, .63]
+				background_down: '0, 0, 0, .8'
+				on_release:
+					app.root.current = 'menu'
+					root.manager.transition.direction = 'right'
+
+# Cheats
+<HcWindow>
+	name: "hc"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/blag.jpg"
+		GridLayout:
+			rows: 4
+			padding: 50
+
+			Label:
+				text: "Hags-Club\n \n \n \n \n \n \n "
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 30
+				color: [1, 1, 1, 1]
+
+		Label:
+			text: "HC is a very good CSGO, Battlefield, World of Warships etc. Cheat\n but this are only GTA infos.\n If you wanna more Infos go to: [ref=link][color=0000ff]Hags-Club.com[/color][/ref].\n In GTAV you activate/deactivate\n no collision or Car Fly etc. the good thing about\n Hags-Club is there are some Cheats that are\n not in other ´´GOOD´´ Cheats. If you using HC (Hags-Club)\n on FiveM you have to be carefull because its detected on FiveM"
+			font_size: 18
+			color: [1, 1, 1, 1]
+			markup: True
+			on_ref_press:
+				root.go()
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "<< back"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'info'
+					root.manager.transition.direction = 'right'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'right'
+			Button:
+				text: "buy HC >>"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'buy'
+					root.manager.transition.direction = 'left'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'center'
+			Button:
+				text: "| ShowCase |"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'showcase'
+					root.manager.transition.direction = 'up'
+
+<ImmunityWindow>
+	name: "immunity"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/blag.jpg"
+		GridLayout:
+			rows: 4
+			padding: 50
+
+			Label:
+				text: "Immunity\n \n \n \n \n \n \n "
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 30
+				color: [1, 1, 1, 1]
+
+		Label:
+			text: "Immunity is a Menu with very nice Design and\nit's a more userfriendly Menu then other Menus.\nMore on: [ref=link][color=0000ff]https://immunity.digital/[/color][/ref]"
+			font_size: 18
+			color: [1, 1, 1, 1]
+			markup: True
+			on_ref_press:
+				root.go()
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "<< back"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'info'
+					root.manager.transition.direction = 'right'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'right'
+			Button:
+				text: "buy Immunity >>"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'buy'
+					root.manager.transition.direction = 'left'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'center'
+			Button:
+				text: "| ShowCase |"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'showcase3'
+					root.manager.transition.direction = 'up'
+
+<ZeroxWindow>
+	name: "zerox"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/blag.jpg"
+		GridLayout:
+			rows: 4
+			padding: 50
+
+			Label:
+				text: "OxCheats\n \n \n \n \n \n \n "
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 30
+				color: [1, 1, 1, 1]
+
+		Label:
+			text: "0xCheats Website: [ref=link][color=0000ff]https://0xcheats.net[/color][/ref]"
+			font_size: 18
+			color: [1, 1, 1, 1]
+			markup: True
+			on_ref_press:
+				root.go()
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "<< back"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'info'
+					root.manager.transition.direction = 'right'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'right'
+			Button:
+				text: "buy 0xCheats >>"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'buy'
+					root.manager.transition.direction = 'left'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'center'
+			Button:
+				text: "| ShowCase |"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'showcase2'
+					root.manager.transition.direction = 'up'
+
+<GTApWindow>
+	name: "gtap"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/blag.jpg"
+		GridLayout:
+			rows: 4
+			padding: 50
+
+			Label:
+				text: "GTA+\n \n \n \n \n \n \n "
+				font_name: "F:/kivy/MASQUE_.ttf"
+				font_size: 30
+				color: [1, 1, 1, 1]
+
+		Label:
+			text: "GTA+ Discord: [ref=link][color=0000ff]https://discord.gg/dJ7YXcFymB[/color][/ref]"
+			font_size: 18
+			color: [1, 1, 1, 1]
+			markup: True
+			on_ref_press:
+				root.go()
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "<< back"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'info'
+					root.manager.transition.direction = 'right'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'right'
+			Button:
+				text: "buy GTA+ >>"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'buy'
+					root.manager.transition.direction = 'left'
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'center'
+			Button:
+				text: "| ShowCase |"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'showcase4'
+					root.manager.transition.direction = 'up'
+
+<OnetapWindow>
+	name: "onetap"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/blag.jpg"
+		GridLayout:
+			rows: 4
+			padding: 50
+
+		Label:
+			text: "ONETAP Cheats\n \n \n \n \n \n \n "
+			font_name: "F:/kivy/MASQUE_.ttf"
+			font_size: 30
+			color: [1, 1, 1, 1]
+
+	Label:
+		text: "ONETAP Cheats Website: [ref=link][color=0000ff]https://www.onetap.com[/color][/ref]"
+		font_size: 18
+		color: [1, 1, 1, 1]
+		markup: True
+		on_ref_press:
+			root.go()
+
+	AnchorLayout:
+		anchor_y: 'bottom'
+		anchor_x: 'left'
+		Button:
+			text: "<< back"
+			size_hint: 0.3, 0.15
+			background_color: [1, 1, 1, .2]
+			background_down: '0, 0, 0, .1'
+			on_release:
+				app.root.current = 'csgo'
+				root.manager.transition.direction = 'right'
+
+	AnchorLayout:
+		anchor_y: 'bottom'
+		anchor_x: 'center'
+		Button:
+			text: "| ShowCase |"
+			size_hint: 0.3, 0.15
+			background_color: [1, 1, 1, .2]
+			background_down: '0, 0, 0, .1'
+			on_release:
+				app.root.current = 'showcase5'
+				root.manager.transition.direction = 'up'
+
+	AnchorLayout:
+		anchor_y: 'bottom'
+		anchor_x: 'right'
+		Button:
+			text: "buy ONETAP >>"
+			size_hint: 0.3, 0.15
+			background_color: [1, 1, 1, .2]
+			background_down: '0, 0, 0, .1'
+			on_release:
+				app.root.current = 'buycsgo'
+				root.manager.transition.direction = 'left'
+
+<WurstWindow>
+	name: "wurst"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/blag.jpg"
+		GridLayout:
+			rows: 4
+			padding: 50
+
+		Label:
+			text: "Wurst Client (FREE)\n \n \n \n \n \n \n "
+			font_name: "F:/kivy/MASQUE_.ttf"
+			font_size: 30
+			color: [1, 1, 1, 1]
+
+	Label:
+		text: "Wurst Client Website: [ref=link][color=0000ff]https://www.wurstclient.net/download/[/color][/ref]"
+		font_size: 18
+		color: [1, 1, 1, 1]
+		markup: True
+		on_ref_press:
+			root.go()
+
+	AnchorLayout:
+		anchor_y: 'bottom'
+		anchor_x: 'left'
+		Button:
+			text: "<< back"
+			size_hint: 0.3, 0.15
+			background_color: [1, 1, 1, .2]
+			background_down: '0, 0, 0, .1'
+			on_release:
+				app.root.current = 'csgo'
+				root.manager.transition.direction = 'right'
+
+	AnchorLayout:
+		anchor_y: 'bottom'
+		anchor_x: 'center'
+		Button:
+			text: "| ShowCase |"
+			size_hint: 0.3, 0.15
+			background_color: [1, 1, 1, .2]
+			background_down: '0, 0, 0, .1'
+			on_release:
+				app.root.current = 'showcase6'
+				root.manager.transition.direction = 'up'					
+
+# Showcase
+<ShowcaseWindow>
+	name: "showcase"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/showcase1.png"
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "| back |"
+				size_hint: 0.15, 0.15
+				background_color: [1, 1, 1, .1]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'hc'
+					root.manager.transition.direction = 'down'
+
+<Showcase2Window>
+	name: "showcase2"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/showcase2.png"
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "| back |"
+				size_hint: 0.15, 0.15
+				background_color: [1, 1, 1, .1]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'zerox'
+					root.manager.transition.direction = 'down'
+
+<Showcase3Window>
+	name: "showcase3"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/showcase3.png"
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "| back |"
+				size_hint: 0.15, 0.15
+				background_color: [1, 1, 1, .1]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'immunity'
+					root.manager.transition.direction = 'down'
+
+<Showcase4Window>
+	name: "showcase4"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/showcase4.png"
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "| back |"
+				size_hint: 0.15, 0.15
+				background_color: [1, 1, 1, .1]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'gtap'
+					root.manager.transition.direction = 'down'
+
+<Showcase5Window>
+	name: "showcase5"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/showcase5.png"
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "| back |"
+				size_hint: 0.15, 0.15
+				background_color: [1, 1, 1, .1]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'onetap'
+					root.manager.transition.direction = 'down'
+
+<Showcase6Window>
+	name: "showcase6"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/showcase5.png"
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "| back |"
+				size_hint: 0.15, 0.15
+				background_color: [1, 1, 1, .1]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'wurst'
+					root.manager.transition.direction = 'down'
+				
+
+# Buy
+<BuyWindow>
+	name: "buy"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/blag.jpg"
+		GridLayout:
+			rows: 2
+			padding: 50
+
+		Label:
+			text: "buy GTA Cheats: \n\n"
+			font_name: "F:/kivy/MASQUE_.ttf"
+			font_size: 40
+
+		Label:
+			text: "[ref=link][color=0000ff]https://discord.gg/VmG7pEaVar[/color][/ref]"
+			font_size: 40
+			markup: True
+			on_ref_press:
+				root.go()
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "<< back to Info"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'info'
+					root.manager.transition.direction = 'right'
+
+<BuyCSGOWindow>
+	name: "buycsgo"
+
+	FloatLayout:
+		Image:
+			source: "F:/kivy/blag.jpg"
+		GridLayout:
+			rows: 2
+			padding: 50
+
+		Label:
+			text: "buy CSGO Cheats: \n\n"
+			font_name: "F:/kivy/MASQUE_.ttf"
+			font_size: 40
+
+		Label:
+			text: "[ref=link][color=0000ff]https://discord.gg/ZZx7GDqwdW[/color][/ref]"
+			font_size: 40
+			markup: True
+			on_ref_press:
+				root.go()
+
+		AnchorLayout:
+			anchor_y: 'bottom'
+			anchor_x: 'left'
+			Button:
+				text: "<< back to CSGO Page"
+				size_hint: 0.3, 0.15
+				background_color: [1, 1, 1, .2]
+				background_down: '0, 0, 0, .1'
+				on_release:
+					app.root.current = 'csgo'
+					root.manager.transition.direction = 'right'				
