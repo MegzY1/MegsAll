@@ -298,4 +298,4 @@ async def ms(ctx):
 async def change_status():
 	await client.change_presence(activity=discord.Game(next(status)), status=discord.Status.dnd)
 
-client.run('ODU1MTM3OTM3MjM5MDQ4MTky.YMuHQw.eZAig60cJp5wPcpINDJskMmuu6c')
+client.run('.')
